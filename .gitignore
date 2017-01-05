@@ -3,6 +3,9 @@
 logs
 *.log
 
+/.idea/
+*.idea
+/android/.gradle/
 # Runtime data
 pids
 *.pid

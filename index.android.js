@@ -40,4 +40,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('SRDsula', () => SRDsula);
+AppRegistry.registerComponent('Autopesula', () => SRDsula);
