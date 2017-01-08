@@ -9,14 +9,26 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Navigator
 } from 'react-native';
 import Action from './Main/Actions'
 
 export default class SRDsula extends Component {
   render() {
     return (
-      <Action></Action>
+      <Navigator
+        initialRoute={{ }}
+        renderScene={(route, navigator) =>
+          <Action
+            onClientClick={() => {
+            alert(clientClicked);}}
+
+            onReceiptClick={() => {
+            alert(receiptClicked);}}
+          ></Action>
+        }
+      />
     );
   }
 }
