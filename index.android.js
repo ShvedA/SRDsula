@@ -15,17 +15,32 @@ import {
 import Action from './Main/Actions'
 
 export default class SRDsula extends Component {
+
+  clientClicked(){
+      const nextIndex = this.route.index + 1;
+      navigator.push({
+          title: 'Scene ' + nextIndex,
+          index: nextIndex,
+      });
+  }
+
+  backClicked(){
+      if (this.route.index > 0) {
+          navigator.pop();
+      }
+  }
+
   render() {
     return (
       <Navigator
-        initialRoute={{ }}
+        initialRoute={{index: 0 }}
         renderScene={(route, navigator) =>
           <Action
             onClientClick={() => {
-            alert(clientClicked);}}
+            this.clientClicked();}}
 
             onReceiptClick={() => {
-            alert(receiptClicked);}}
+            alert('receiptClicked');}}
           ></Action>
         }
       />
