@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableHighlight  } from 'react-native';
 
 export default class Actions extends Component {
     render() {
