@@ -6,13 +6,13 @@ export default class Actions extends Component {
         return (
             <View style={{flex: 1, flexDirection: 'row'}}>
                 <View style={{flex:1, justifyContent: 'center', alignItems: 'center'}}>
-                    <TouchableHighlight onPress={this.props.onClientClick}>
-                        <Text>KLIENT</Text>
+                    <TouchableHighlight onPress={this.props.onClientClick} underlayColor="red">
+                        <Text>Клиент</Text>
                     </TouchableHighlight>
                 </View>
                 <View style={{flex:1, justifyContent: 'center', alignItems: 'center'}}>
-                    <TouchableHighlight onPress={this.props.onReceiptClick}>
-                        <Text>KVIITUNG</Text>
+                    <TouchableHighlight onPress={this.props.onReceiptClick} underlayColor="green">
+                        <Text>Квитанция</Text>
                     </TouchableHighlight>
                 </View>
             </View>
@@ -23,4 +23,4 @@ export default class Actions extends Component {
 Actions.propTypes = {
     onClientClick: PropTypes.func.isRequired,
     onReceiptClick: PropTypes.func.isRequired,
-}
+};
